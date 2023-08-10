@@ -43,7 +43,7 @@ function Create({ setCreate }) {
       console.log("Validation passed");
       console.log(onchange)
       console.log(user)
-      // setCreate(null); // Close the modal
+      setCreate(null); // Close the modal
       dispatch(Change("fname", "")); // Clear form inputs
       dispatch(Change("email", ""));
     }else {
