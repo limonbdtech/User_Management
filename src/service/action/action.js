@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
-import { addProduct, decriment, edite, editeCondition, handlechange, incriment, positiondata, removeProduct, reset, search, sortdata, updatedata } from "../constant/constant";
+import {  addUser, decriment, edite, editeCondition, handlechange, incriment, positiondata,removeUser, reset, search, sortdata, updatedata } from "../constant/constant";
 
 
 export let Incriment = ()=>{
@@ -25,17 +25,17 @@ export let Change = (name,value)=>{
     }
 }
 
-export let Add = (product)=>{
+export let Add = (user)=>{
     let date = new Date()
     return{
-        type:addProduct,
-        payload:{...product,id:uuidv4(),time:date.getDate()}
+        type:addUser,
+        payload:{...user,id:uuidv4(),time:date.getDate()}
     }
 }
-export let Remove = (product)=>{
+export let Remove = (user)=>{
     return{
-        type:removeProduct,
-        payload:product
+        type:removeUser,
+        payload:user
     }
 }
 export let Edite = (condition)=>{

@@ -1,6 +1,6 @@
 
 
-import { addProduct, decriment, edite, editeCondition, handlechange, incriment, positiondata, removeProduct, reset,  search,  updatedata ,sortdata} from "../constant/constant"
+import { addUser, decriment, edite, editeCondition, handlechange, incriment, positiondata, removeUser, reset,  search,  updatedata ,sortdata} from "../constant/constant"
 
 
 
@@ -98,16 +98,16 @@ export let Counter =(state=initialState,action)=>{
              [action.payload.name]:action.payload.value
               }
           }
-      case addProduct:
+      case addUser:
           return {
               ...state,
-              product:[...state.product,action.payload]
+              user:[...state.user,action.payload]
           }
 
-      case removeProduct:
+      case removeUser:
           return {
               ...state,
-              product: state.product.filter((item)=> item.id !== action.payload)
+              user: state.user.filter((item)=> item.id !== action.payload)
           }
 
     
@@ -128,7 +128,7 @@ export let Counter =(state=initialState,action)=>{
           case updatedata:
              return{
                 ...state,
-                product:state.product.map((item)=>{
+                user:state.user.map((item)=>{
        if(item.id === action.payload.id){
               return action.payload
        }else{

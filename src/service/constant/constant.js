@@ -5,8 +5,8 @@ export const reset = "Reset";
 
 export const handlechange = "Onchnage";
 
-export const addProduct = "Add"
-export const removeProduct = "remove"
+export const addUser = "Add"
+export const removeUser = "remove"
 
 export const edite = "Edite"
 export const editeCondition = "ConditionEdite"

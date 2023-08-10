@@ -9,6 +9,7 @@ function Create({ setCreate }) {
   // Redux setup
   let dispatch = useDispatch();
   let onchange = useSelector(state => state.onchange);
+  let user = useSelector(state => state.user);
 
   // State for handling errors
   let [error, setError] = useState("");
@@ -34,16 +35,18 @@ function Create({ setCreate }) {
   // Handler for form submission
   const add = (e) => {
     e.preventDefault();
-
+       console.log("add")
     // Basic email validation using regex
     if (emailRegex.test(onchange.email)) {
       // Dispatch action to add user data
       dispatch(Add(onchange));
       console.log("Validation passed");
-      setCreate(null); // Close the modal
+      console.log(onchange)
+      console.log(user)
+      // setCreate(null); // Close the modal
       dispatch(Change("fname", "")); // Clear form inputs
       dispatch(Change("email", ""));
-    } else {
+    }else {
       setError("Invalid email try to :(hp23@gmail.com)"); // Display error message
     }
   }
