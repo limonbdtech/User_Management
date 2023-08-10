@@ -1,0 +1,4 @@
+.search::placeholder{
+background: url('../../assets/search.png') no-repeat  right;
+background-size: 20px;
+}

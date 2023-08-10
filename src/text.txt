@@ -1,0 +1,145 @@
+import { useDispatch, useSelector } from "react-redux";
+import { Edite, EditeCondition, Remove, Update } from "../../service/action/action";
+import { Button } from "react-bootstrap";
+import { useState,useEffect ,useMemo} from "react";
+
+function Show() {
+  const state = useSelector((state) => state);
+  const dispatch = useDispatch();
+  const [updateData, setUpdateData] = useState({});
+
+  let { fname, email, position } = updateData;
+
+  const data = useMemo(() => state.product.find((item) => item.id === state.editecondition) || {}, [
+    state.product,
+    state.editecondition,
+  ]);
+
+  useEffect(() => {
+    // Update the updateData state when data changes
+    setUpdateData(data);
+  }, [data]);
+
+  // Handler function for editing an item
+  const editItem = (id) => {
+    dispatch(EditeCondition(id));
+    dispatch(Edite(true));
+  };
+
+
+  const handleUpdate = () => {
+    let updatedData = { ...data, ...updateData };
+    dispatch(Update(updatedData));
+    dispatch(EditeCondition(null));
+    dispatch(Edite(null));
+    setUpdateData({});
+  };
+
+  const handleChange = (e) => {
+    setUpdateData({
+      ...updateData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  // Rest of your code...
+
+
+  return (
+    <div>
+      <table className="table table table-responsive align-middle">
+        <thead>
+          <tr className="text-center">
+            <th scope="col">#</th>
+            <th scope="col">name</th>
+            <th scope="col">email</th>
+            <th scope="col">position</th>
+            <th scope="col">action</th>
+            <th scope="col">action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {state.product.map((item, index) => (
+            <tr className="text-center" key={index}>
+              <th scope="row">{index + 1}</th>
+              <td>
+                {state.edite && state.editecondition === item.id ? (
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      name="fname" // Corrected the name attribute
+                      value={ fname} // Use updateData.name instead of item.fname
+                      onChange={handleChange}
+                      className="form-control"
+                      id="exampleFormControlInput1"
+                      placeholder="enter your name"
+                    />
+                  </div>
+                ) : (
+                  item.fname // Corrected to item.name
+                )}
+              </td>
+              <td>
+                {state.edite && state.editecondition === item.id ? (
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      name="email"
+                      value={ email}
+                      onChange={handleChange}
+                      className="form-control"
+                      id="exampleFormControlInput1"
+                      placeholder="enter your email" // Corrected placeholder text
+                    />
+                  </div>
+                ) : (
+                  item.email // Corrected to item.email
+                )}
+              </td>
+              <td>
+                {state.edite && state.editecondition === item.id ? (
+                  <select
+                    className="form-control"
+                    name="position"
+                    value={ position}
+                    onChange={handleChange}
+                    id="exampleFormControlSelect1"
+                  >
+                    <option value="">select your profession</option>
+                    <option value="frontend developer">frontend developer</option>
+                    <option value="backend developer">backend developer</option>
+                    <option value="senior software engineer">senior software engineer</option>
+                    <option value="software architect">software architect</option>
+                  </select>
+                ) : (
+                  item.position
+                )}
+              </td>
+              <td>
+                {state.edite && state.editecondition === item.id ? (
+                  <Button onClick={handleUpdate}>Update</Button> // Move the update button here
+                ) : (
+                  <Button onClick={() => editItem(item.id)}>Edit</Button>
+                )}
+              </td>
+              <td>
+                <Button
+                  variant="danger"
+                  className="btn-sm"
+                  onClick={() => dispatch(Remove(item.id))}
+                >
+                  Remove
+                </Button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+export default Show;
+
+

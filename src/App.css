@@ -1,0 +1,11 @@
+#root {
+  max-width: 1280px;
+ 
+
+}
+
+/* bootstrap over wirte */
+.modal{
+  --bs-modal-width:60%
+}
+
