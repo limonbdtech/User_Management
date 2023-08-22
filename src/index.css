@@ -3,3 +3,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.delete{
+  border: none;
+  background-color: none;
+}
+.click{
+  transition: transform 0.5s ease;
+}
+
+.click:hover{
+  transform: scale(1.2); /* Scaling up the div by 20% */
+}

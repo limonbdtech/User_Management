@@ -1,7 +1,9 @@
 1 
 import PropTypes from 'prop-types';
-import { Button } from "react-bootstrap";
+// import { Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEdit, faRefresh, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { Edite, EditeCondition, Remove } from "../../service/action/action";
 
 function ShowRow({
@@ -87,21 +89,27 @@ function ShowRow({
       <td>
         {edite && editecondition === item.id ? (
           // Show "Update" button during edit mode
-          <Button onClick={handleUpdate}>Update</Button>
+          <button className='delete' onClick={handleUpdate}>
+
+            <FontAwesomeIcon  className="text-success click"icon={faRefresh}/>
+          </button>
         ) : (
           // Show "Edit" button during non-edit mode
-          <Button onClick={() => editItem(item.id)}>Edit</Button>
+          <button className='delete' onClick={() => editItem(item.id)}>
+
+            <FontAwesomeIcon  className="text-success click"icon={faEdit}/>
+          </button>
         )}
       </td>
       <td>
         {/* "Remove" button */}
-        <Button
-          variant="danger"
-          className="btn-sm"
+        <button
+        
+          className="delete"
           onClick={() => dispatch(Remove(item.id))}
         >
-          Remove
-        </Button>
+          <FontAwesomeIcon  className='text-danger click h-2' icon={faTrash}/>
+        </button>
       </td>
     </tr>
   );
