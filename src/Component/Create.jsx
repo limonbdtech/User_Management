@@ -9,7 +9,7 @@ function Create({ setCreate }) {
   // Redux setup
   let dispatch = useDispatch();
   let onchange = useSelector(state => state.onchange);
-  let user = useSelector(state => state.user);
+  
 
   // State for handling errors
   let [error, setError] = useState("");
@@ -32,17 +32,36 @@ function Create({ setCreate }) {
     }
   }
 
+   let fnameValidation = (fname)=>{
+    let separet = fname.split(" ");
+
+    let joinName =  separet.map(item=>{
+     let firstLetter = item.charAt(0).toUpperCase()
+      let fnameWithoutFirstLeter = item.slice(1,item.length)
+         return (firstLetter + fnameWithoutFirstLeter)
+    
+    })
+    
+     let finalName = joinName.join(" ")
+     return finalName
+   }
+
+
   // Handler for form submission
   const add = (e) => {
     e.preventDefault();
-       console.log("add")
     // Basic email validation using regex
     if (emailRegex.test(onchange.email)) {
       // Dispatch action to add user data
-      dispatch(Add(onchange));
-      console.log("Validation passed");
-      console.log(onchange)
-      console.log(user)
+      let {fname} = onchange;
+      
+        
+
+  onchange.fname = fnameValidation(fname)
+
+      
+      dispatch(Add(onchange))
+      
       setCreate(null); // Close the modal
       dispatch(Change("fname", "")); // Clear form inputs
       dispatch(Change("email", ""));

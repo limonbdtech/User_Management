@@ -19,45 +19,45 @@ let initialState = {
     },
     user:[
         {
-            fname:"limon",
+            fname:"Limon",
             email:"limonbdtech2020@gmail.com",
-            position:"fresher",
+            position:"frontend developer",
             id:"aekadl2323ae3"
         },
         {
             fname:"rakib",
             email:"rimon@gmail.com",
-            position:"fresher",
+            position:"backend developer",
             id:"asdfaskllkasdf2343"
         },
         {
             fname:"sumon",
-            email:"limonbdtech2020@gmail.com",
-            position:"fresher",
+            email:"sumon2015@gmail.com",
+            position:"frontend developer",
             id:"aekadl2323ae3asdasf3434"
         },
         {
-            fname:"limon",
-            email:"loulook2020@gmail.com",
+            fname:"Limon Hosen",
+            email:"limon2020@outlook.com",
             position:"backend developer",
             id:"aekadl2323ae3asdf3452"
         },
         {
-            fname:"ryad",
+            fname:"Ryad Hasan",
             email:"xyz.outlook.com",
             position:"senior softwer enginner",
             id:"aekadl2323ae3456435sas"
         },
         {
-            fname:"refat",
-            email:"sakibhotmail.org",
-            position:"fresher",
+            fname:"Refat Ahmed",
+            email:"sakib34334@hotmail.com",
+            position:"frontend developer",
             id:"343gffaekadl2323ae3"
         },
         {
-            fname:"tsnim ahmed",
-            email:"hp@gmail.com",
-            position:"fresher",
+            fname:"Tasnim Ahmed",
+            email:"hp230@gmail.com",
+            position:"backend developer",
             id:"764534sdfaekadl2323ae3"
         },
         {
@@ -69,7 +69,7 @@ let initialState = {
     ]
 }
 
-export let Counter =(state=initialState,action)=>{
+export let User =(state=initialState,action)=>{
     switch (action.type) {
     
   case handlechange :

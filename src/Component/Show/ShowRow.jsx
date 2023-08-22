@@ -22,8 +22,6 @@ function ShowRow({
     dispatch(Edite(true));
     dispatch(EditeCondition(id));
   };
-
-  console.log(item)
   return (
     <tr className="text-center">
       <th scope="row">{index + 1}</th>
