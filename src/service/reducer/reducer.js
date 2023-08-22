@@ -45,7 +45,7 @@ let initialState = {
         {
             fname:"Ryad Hasan",
             email:"xyz23@outlook.com",
-            position:"senior softwer enginner",
+            position:"senior software engineer",
             id:"aekadl2323ae3456435sas"
         },
         {
@@ -63,7 +63,7 @@ let initialState = {
         {
             fname:"Rimon",
             email:"abc23@gmail.com",
-            position:"softwear arcitech",
+            position:"software architect",
             id:"asdfkj43493aekadl2323ae3"
         },
     ]

@@ -15,8 +15,8 @@ function Position() {
       <option value="all">all</option>
       <option value="frontend">frontend developer</option>
       <option value="backend">backend developer</option>
-      <option value="senior">senior softwear enginner</option>
-      <option value="softwear">softwear arcitech</option>
+      <option value="senior">senior softwear enginner</option> 
+      <option value="softwear">softwear architect</option> 
     </select>
   </div>
         </div>

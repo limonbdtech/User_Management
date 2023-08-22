@@ -94,7 +94,7 @@ function Create({ setCreate }) {
               <label htmlFor="exampleFormControlSelect1">Position select </label>
               <select className="form-control" name="position" required value={ onchange.type} onChange={change} id="exampleFormControlSelect1">
                 <option value="frontend developer">Frontend Developer</option>
-                <option value="backend developer">Backend Developer</option>
+                <option value="backend developer">Backend Developer</option> 
                 <option value="senior software engineer">Senior Software Engineer</option>
                 <option value="software architect">Software Architect</option>
               </select>

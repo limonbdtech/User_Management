@@ -62,9 +62,9 @@ function Show({ setCreate }) {
 
   if (sort === "normal") {
     sortedData = filterData;
-  } else if (sort === "asending") {
+  } else if (sort === "ascending") {
     sortedData = filterData.slice().sort((a, b) => a.fname.localeCompare(b.fname));
-  } else if (sort === "desending") {
+  } else if (sort === "descending") {
     sortedData = filterData.slice().sort((a, b) => b.fname.localeCompare(a.fname));
   } else {
     sortedData = filterData;

@@ -19,8 +19,8 @@ function Sort() {
           id="exampleFormControlSelect1"
         >
           <option value="normal">Normal</option>
-          <option value="asending">Ascending Order</option>
-          <option value="desending">Descending Order</option>
+          <option value="ascending">Ascending Order</option>  
+          <option value="descending">Descending Order</option>
         </select>
       </div>
     </div>
