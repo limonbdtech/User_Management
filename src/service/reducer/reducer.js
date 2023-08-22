@@ -25,13 +25,13 @@ let initialState = {
             id:"aekadl2323ae3"
         },
         {
-            fname:"rakib",
+            fname:"Rakib",
             email:"rimon@gmail.com",
             position:"backend developer",
             id:"asdfaskllkasdf2343"
         },
         {
-            fname:"sumon",
+            fname:"Sumon",
             email:"sumon2015@gmail.com",
             position:"frontend developer",
             id:"aekadl2323ae3asdasf3434"
@@ -44,7 +44,7 @@ let initialState = {
         },
         {
             fname:"Ryad Hasan",
-            email:"xyz.outlook.com",
+            email:"xyz23@outlook.com",
             position:"senior softwer enginner",
             id:"aekadl2323ae3456435sas"
         },
@@ -61,8 +61,8 @@ let initialState = {
             id:"764534sdfaekadl2323ae3"
         },
         {
-            fname:"rimon",
-            email:"abc@gmail.com",
+            fname:"Rimon",
+            email:"abc23@gmail.com",
             position:"softwear arcitech",
             id:"asdfkj43493aekadl2323ae3"
         },
