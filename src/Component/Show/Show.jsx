@@ -92,8 +92,8 @@ function Show({ setCreate }) {
             <th scope="col">name</th>
             <th scope="col">email</th>
             <th scope="col">position</th>
-            <th scope="col">action</th>
-            <th scope="col">action</th>
+            <th scope="col">Edite</th>
+            <th scope="col">Delete</th>
           </tr>
         </thead>
         <tbody>
