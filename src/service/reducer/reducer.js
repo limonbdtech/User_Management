@@ -63,7 +63,7 @@ let initialState = {
         {
             fname:"Rimon",
             email:"abc23@gmail.com",
-            position:"software architect",
+            position:"softwear architect",
             id:"asdfkj43493aekadl2323ae3"
         },
     ]
