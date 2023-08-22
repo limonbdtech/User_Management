@@ -1,22 +1,8 @@
 import { v4 as uuidv4 } from 'uuid';
-import {  addUser, decriment, edite, editeCondition, handlechange, incriment, positiondata,removeUser, reset, search, sortdata, updatedata } from "../constant/constant";
+import {  addUser, edite, editeCondition, handlechange, positiondata,removeUser, search, sortdata, updatedata } from "../constant/constant";
 
 
-export let Incriment = ()=>{
-    return{
-        type:incriment
-    }
-}
-export let Decriment = ()=>{
-    return{
-        type:decriment
-    }
-}
-export let Reset = ()=>{
-    return{
-        type:reset
-    }
-}
+
 
 export let Change = (name,value)=>{
     return{

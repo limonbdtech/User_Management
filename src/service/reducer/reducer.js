@@ -1,6 +1,6 @@
 
 
-import { addUser, decriment, edite, editeCondition, handlechange, incriment, positiondata, removeUser, reset,  search,  updatedata ,sortdata} from "../constant/constant"
+import { addUser,edite, editeCondition, handlechange,  positiondata, removeUser,search,  updatedata ,sortdata} from "../constant/constant"
 
 
 
@@ -71,26 +71,8 @@ let initialState = {
 
 export let Counter =(state=initialState,action)=>{
     switch (action.type) {
-      case incriment:
-          return {
-              ...state,
-              count:state.count + 1
-          }
-          
-      case decriment:
-          return {
-              ...state,
-              count:state.count - 1
-          }
-          
-      case reset:
-          return {
-              ...state,
-              count:state.count  = 0
-          }
-
-
-      case handlechange :
+    
+  case handlechange :
           return {
               ...state,
               onchange:{

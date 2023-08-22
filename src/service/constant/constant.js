@@ -1,6 +1,4 @@
-export const incriment = "Incriment";
-export const decriment = "Deciment";
-export const reset = "Reset";
+
 
 
 export const handlechange = "Onchnage";
