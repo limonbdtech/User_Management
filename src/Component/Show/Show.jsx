@@ -72,7 +72,7 @@ function Show({ setCreate }) {
 
   return (
     <div>
-      <table className="table table table-responsive align-middle">
+      <table className="table   table-responsive align-middle">
         <thead>
           <tr className="d-flex align-items-center justify-content-between">
             <th scope="col"> <Search /> </th>
@@ -85,10 +85,10 @@ function Show({ setCreate }) {
         </thead>
       </table>
 
-      <table className="table table table-responsive align-middle">
+      <table className="table table table-light table-hover table-responsive align-middle">
         <thead>
           <tr className="text-center">
-            <th scope="col">#</th>
+            <th scope="col">No</th>
             <th scope="col">name</th>
             <th scope="col">email</th>
             <th scope="col">position</th>

@@ -4,12 +4,12 @@ import "./App.css"
 
 function App() {
   return (
-    <div className="container-xl container-fulid">
+    <div className=" container">
          <div className="row">
-           <div className="col">
+    
                 <UserMangement/>
 
-           </div>
+        
          </div>
     </div>
   );

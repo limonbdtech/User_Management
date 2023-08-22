@@ -13,7 +13,7 @@ function UserMangement() {
 
     return (
         <div>
-            <h2 className="text-center text-success h1 font-weight-bold">User Mangement</h2>
+            <h2 className="text-center text-success h1  font-weight-bold">User Mangement</h2>
             {create ? <Create  setCreate={setCreate}/>: <Show setCreate={setCreate}/>}
            
         </div>
